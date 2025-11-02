@@ -186,3 +186,10 @@ body{
   .arrow-left{ left:1.5% } .arrow-right{ right:1.5% }
   .product-name{ font-size:32px }
 }
+
+/* SPA routing: hide all pages by default, show only the active one */
+.page { display: none; }
+.page.active { display: block; }
+
+/* active state for selected nav link already exists; just ensure underline visibility */
+.main-nav .nav-link.active { text-decoration: underline 2px; }
