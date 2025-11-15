@@ -1,76 +1,148 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KineticPulse Pricing</title>
-  <link rel="stylesheet" href="pricing-page.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KineticPulse – Prices</title>
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- 🔥 HEADER uniforme pour tout le site -->
-  <header class="top-header">
-    <a href="index.html">
-      <img src="logotransparent.png" alt="KineticPulse Logo" class="logo" />
-    </a>
+    <!-- HEADER COMMUN -->
+    <header class="top-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="KineticPulse Logo" class="logo" />
+        </a>
 
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="feature.html">Product Features</a></li>
-        <li><a href="a-pricing-page.html">Prices</a></li>
-        <li><a href="team.html">Our Team</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Product Features</a></li>
+                <li><a href="a-pricing-page.html" class="active">Prices</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- 🔥 PAGE TITLE -->
-  <header class="page-header">
-    <h1>KineticPulse</h1>
-    <p class="tagline">Move. Translate. Charge.</p>
-  </header>
-
-  <!-- 🔥 CONTENT -->
-  <main>
-
-    <section class="product">
-      <img src="product1.jpg" alt="Basic Wristband" />
-      <h2 class="product-name" onclick="toggleDescription(this)">Basic Band</h2>
-      <p class="price">$99</p>
-      <p class="description">Standard battery. Charges one phone. Basic translation.</p>
+    <!-- PAGE TITLE -->
+    <section class="page-header">
+        <h1>Choose Your KineticPulse</h1>
+        <p>Find the model that fits your style and performance needs.</p>
     </section>
 
-    <section class="product">
-      <img src="PulsX-blue.png" alt="Battery Wristband" />
-      <h2 class="product-name" onclick="toggleDescription(this)">Battery Band</h2>
-      <p class="price">$179</p>
-      <p class="description">Large battery. Charges two phones. Basic translation.</p>
-    </section>
+    <!-- PRODUCT GRID -->
+    <main class="pricing-grid">
 
-    <section class="product">
-      <img src="PulsX-pink.png" alt="Translator Wristband" />
-      <h2 class="product-name" onclick="toggleDescription(this)">Translator Band</h2>
-      <p class="price">$149</p>
-      <p class="description">Standard battery. Translates 50+ languages. One phone charge.</p>
-    </section>
+        <!-- Pulse Pro Black -->
+        <section class="product-card">
+            <img src="images/pulse-pro-black.png" alt="Pulse Pro Black" />
+            <h2>Pulse Pro Black</h2>
+            <p class="price">$179</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                High-efficiency kinetic charger. Durable black finish. Water-resistant.
+            </p>
+        </section>
 
-    <section class="product">
-      <img src="PulsX-purple.png" alt="Premium Wristband" />
-      <h2 class="product-name" onclick="toggleDescription(this)">Premium Band</h2>
-      <p class="price">$199</p>
-      <p class="description">Large battery. Translates 100+ languages. Charges two phones.</p>
-    </section>
+        <!-- Pulse Pro Blue -->
+        <section class="product-card">
+            <img src="images/pulse-pro-blue.png" alt="Pulse Pro Blue" />
+            <h2>Pulse Pro Blue</h2>
+            <p class="price">$179</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Smooth blue edition with upgraded translation engine.
+            </p>
+        </section>
 
-    <section class="product">
-      <img src="PulsX-black.png" alt="Airpods Wristband" />
-      <h2 class="product-name" onclick="toggleDescription(this)">Airpods Band</h2>
-      <p class="price">$139</p>
-      <p class="description">Standard battery. Comes with free earbuds for translation.</p>
-    </section>
+        <!-- Pulse Pro Green -->
+        <section class="product-card">
+            <img src="images/pulse-pro-green.png" alt="Pulse Pro Green" />
+            <h2>Pulse Pro Green</h2>
+            <p class="price">$179</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Eco-green model with enhanced kinetic efficiency.
+            </p>
+        </section>
 
-  </main>
+        <!-- Pulse Pro Pink -->
+        <section class="product-card">
+            <img src="images/pulse-pro-pink.png" alt="Pulse Pro Pink" />
+            <h2>Pulse Pro Pink</h2>
+            <p class="price">$179</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Stylish pink design with soft-touch strap.
+            </p>
+        </section>
 
-  <script src="pricing-page.js"></script>
+        <!-- Pulse Pro Purple -->
+        <section class="product-card">
+            <img src="images/pulse-pro-purple.png" alt="Pulse Pro Purple" />
+            <h2>Pulse Pro Purple</h2>
+            <p class="price">$179</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Premium purple edition with night-glow display.
+            </p>
+        </section>
+
+        <!-- PULSX SERIES -->
+        <section class="product-card">
+            <img src="images/PulsX-black.png" alt="PulsX Black" />
+            <h2>PulsX Black</h2>
+            <p class="price">$199</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Next-gen PulsX engine. 2× kinetic conversion power.
+            </p>
+        </section>
+
+        <section class="product-card">
+            <img src="images/PulsX-blue.png" alt="PulsX Blue" />
+            <h2>PulsX Blue</h2>
+            <p class="price">$199</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Deep-sea blue model with extended battery reserve.
+            </p>
+        </section>
+
+        <section class="product-card">
+            <img src="images/PulsX-green.png" alt="PulsX Green" />
+            <h2>PulsX Green</h2>
+            <p class="price">$199</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Reinforced chassis with silver-ion coated components.
+            </p>
+        </section>
+
+        <section class="product-card">
+            <img src="images/PulsX-pink.png" alt="PulsX Pink" />
+            <h2>PulsX Pink</h2>
+            <p class="price">$199</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                High-fidelity translator chipset with color-matched strap.
+            </p>
+        </section>
+
+        <section class="product-card">
+            <img src="images/PulsX-purple.png" alt="PulsX Purple" />
+            <h2>PulsX Purple</h2>
+            <p class="price">$199</p>
+            <button class="desc-btn">View details</button>
+            <p class="description">
+                Elite edition PulsX with crystal-infused kinetic rotor.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
