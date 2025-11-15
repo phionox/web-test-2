@@ -1,122 +1,82 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Team - KineticPulse</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KineticPulse – Our Team</title>
 
-  <link rel="stylesheet" href="teamPage.css">
-
-  <style>
-    /* Fix affichage du logo dans le header */
-    .header-logo {
-      height: 55px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: 500;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    header.top-header {
-      background: linear-gradient(135deg, #4d42b3 0%, #3a2f8f 100%);
-      padding: 15px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- 🔥 HEADER GLOBAL (identique aux autres pages) -->
-  <header class="top-header">
-    <a href="index.html">
-      <img src="logotransparent.png" alt="KineticPulse Logo" class="header-logo" />
-    </a>
+    <!-- HEADER COMMUN -->
+    <header class="top-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="KineticPulse Logo" class="logo" />
+        </a>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="feature.html">Product Features</a></li>
-        <li><a href="a-pricing-page.html">Prices</a></li>
-        <li><a href="teamPage.html" class="active">Our Team</a></li>
-      </ul>
-    </nav>
-  </header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="feature.html">Product Features</a></li>
+                <li><a href="a-pricing-page.html">Prices</a></li>
+                <li><a href="team.html" class="active">Our Team</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- TEAM SECTION -->
-  <section class="team-section">
-    <h1>Meet Our Team</h1>
-    <p>Our diverse team of innovators is committed to building the future of wearable technology.</p>
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Our Team</h1>
+        <p>The innovators behind the KineticPulse movement.</p>
+    </section>
 
-    <div class="team-container">
+    <!-- TEAM GRID -->
+    <main class="team-grid">
 
-      <div class="team-card">
-        <div class="photo"></div>
-        <div class="lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line short"></div>
+        <!-- Each card = one team member -->
+        <div class="team-card" onclick="openModal('images/pulse-pro-blue.png', 'Lamine – Lead Designer')">
+            <div class="team-photo"></div>
+            <h2>Lamine</h2>
+            <p class="role">Lead Designer</p>
         </div>
-      </div>
 
-      <div class="team-card">
-        <div class="photo"></div>
-        <div class="lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line short"></div>
+        <div class="team-card" onclick="openModal('images/pulse-pro-purple.png', 'Sarah – UI/UX Specialist')">
+            <div class="team-photo"></div>
+            <h2>Sarah</h2>
+            <p class="role">UI/UX Specialist</p>
         </div>
-      </div>
 
-      <div class="team-card">
-        <div class="photo"></div>
-        <div class="lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line short"></div>
+        <div class="team-card" onclick="openModal('images/pulse-pro-pink.png', 'Adam – Full-Stack Developer')">
+            <div class="team-photo"></div>
+            <h2>Adam</h2>
+            <p class="role">Full-Stack Developer</p>
         </div>
-      </div>
 
-      <div class="team-card">
-        <div class="photo"></div>
-        <div class="lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line short"></div>
+        <div class="team-card" onclick="openModal('images/pulse-pro-green.png', 'Mira – Product Engineer')">
+            <div class="team-photo"></div>
+            <h2>Mira</h2>
+            <p class="role">Product Engineer</p>
         </div>
-      </div>
 
-      <div class="team-card">
-        <div class="photo"></div>
-        <div class="lines">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line short"></div>
+        <div class="team-card" onclick="openModal('images/pulse-pro-black.png', 'Noah – Marketing Manager')">
+            <div class="team-photo"></div>
+            <h2>Noah</h2>
+            <p class="role">Marketing Manager</p>
         </div>
-      </div>
 
+    </main>
+
+    <!-- MODAL (pop-up window) -->
+    <div id="modal" class="team-modal">
+        <div class="modal-content">
+            <img id="modalImg" src="" alt="Team Member" />
+            <p id="modalText"></p>
+            <button onclick="closeModal()" class="close-btn">Close</button>
+        </div>
     </div>
-  </section>
 
+    <script src="script.js"></script>
 </body>
 </html>
