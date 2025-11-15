@@ -1,60 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kinetic Pulse</title>
+    <title>KineticPulse – Home</title>
 
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
 
-  <body>
-    <header>
-      <div class="logo">
-        <!-- Cliquer sur le logo ramène à la page d'accueil -->
-        <a href="index.html">
-          <img src="logotransparent.png" alt="Logo Kinetic Pulse" />
+<body>
+
+    <!-- HEADER COMMUN -->
+    <header class="top-header">
+        <a href="index.html" class="logo-link">
+            <img src="images/logo.png" alt="KineticPulse Logo" class="logo" />
         </a>
-      </div>
-      <nav>
-        <ul>
-          <!-- Tu peux changer les noms de fichiers si besoin -->
-          <li><a href="index.html">Home</a></li>
-          <li><a href="product-features.html">Product Features</a></li>
-          <li><a href="a-pricing-page.html">Prices</a></li>
-          <li><a href="team.html">About Us</a></li>
-        </ul>
-      </nav>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="feature.html">Product Features</a></li>
+                <li><a href="a-pricing-page.html">Prices</a></li>
+                <li><a href="team.html">Our Team</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-      <!-- Colonne gauche : logo slogan -->
-      <section class="left">
-        <img src="logomove.png" alt="Logo slogan Kinetic Pulse" class="left-logo" />
-      </section>
+    <!-- MAIN SECTION ACCUEIL -->
+    <main class="home-main">
 
-      <!-- Centre : titre + boutons + montre -->
-      <section class="center">
-        <h1>Kinetic Pulse Pro</h1>
-        <p class="subtitle">Next Level Kinetic.</p>
+        <!-- Left side -->
+        <section class="left">
+            <img src="images/logo.homepage.png" alt="KineticPulse Homepage Logo" class="left-logo" />
+        </section>
 
-        <div class="btn-group">
-          <button class="buy-btn">Buy now</button>
-          <button class="buy-btn">Learn more</button>
-        </div>
+        <!-- Center content -->
+        <section class="center">
+            <h1 class="home-title">KineticPulse Pro</h1>
+            <p class="subtitle">Move. Charge. Translate.</p>
 
-        <div class="logoProduit">
-          <img src="watch-pro.png" alt="Montre Kinetic Pulse Pro" />
-        </div>
-      </section>
+            <div class="btn-group">
+                <a href="a-pricing-page.html" class="btn-primary">Buy now</a>
+                <a href="feature.html" class="btn-secondary">Learn more</a>
+            </div>
 
-      <!-- Colonne droite (vide pour l'instant, tu pourras ajouter du texte ou des icônes) -->
-      <section class="right">
-        <p></p>
-      </section>
+            <div class="product-showcase">
+                <img src="images/pulse-pro-blue.png" alt="KineticPulse Pro Blue" class="main-watch" />
+            </div>
+        </section>
+
+        <!-- Right side (optional content area) -->
+        <section class="right">
+            <!-- You can add icons or extra features later -->
+        </section>
+
     </main>
 
-    <!-- Lien vers le fichier JS (pour plus tard) -->
+    <!-- Main JS -->
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
