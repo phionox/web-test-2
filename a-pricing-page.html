@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KineticPulse Pricing</title>
   <link rel="stylesheet" href="pricing-page.css" />
-</head> 
-  <header>
-    <nav>
-        <a href="index.html">home</a>
-        <a href="produit.html">featuring</a>
-        <a href="prix.html">Price</a>
-        <a href="equipe.html">our team</a>
-    </nav>
-</header>
+</head>
+
 <body>
-  <header>
-    <img src="/logo.jpeg" alt="KineticPulse Logo" class="logo" />
+
+  <!-- 🔥 HEADER uniforme pour tout le site -->
+  <header class="top-header">
+    <a href="index.html">
+      <img src="logotransparent.png" alt="KineticPulse Logo" class="logo" />
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feature.html">Product Features</a></li>
+        <li><a href="a-pricing-page.html">Prices</a></li>
+        <li><a href="team.html">Our Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🔥 PAGE TITLE -->
+  <header class="page-header">
     <h1>KineticPulse</h1>
     <p class="tagline">Move. Translate. Charge.</p>
   </header>
 
+  <!-- 🔥 CONTENT -->
   <main>
+
     <section class="product">
       <img src="product1.jpg" alt="Basic Wristband" />
       <h2 class="product-name" onclick="toggleDescription(this)">Basic Band</h2>
@@ -56,16 +68,9 @@
       <p class="price">$139</p>
       <p class="description">Standard battery. Comes with free earbuds for translation.</p>
     </section>
+
   </main>
 
   <script src="pricing-page.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
