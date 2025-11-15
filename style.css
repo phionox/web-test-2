@@ -174,3 +174,83 @@ body {
 .description.show {
     display: block;
 }
+/* TEAM PAGE */
+.team-grid {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px 80px;
+    display: grid;
+    gap: 35px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.team-card {
+    background: rgba(255,255,255,0.14);
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    backdrop-filter: blur(4px);
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.22);
+}
+
+.team-photo {
+    width: 110px;
+    height: 110px;
+    background: rgba(255,255,255,0.26);
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.role {
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* MODAL */
+.team-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.65);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    color: black;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 350px;
+}
+
+.modal-content img {
+    width: 180px;
+    margin-bottom: 15px;
+}
+
+.close-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #5a49ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #4838d1;
+}
