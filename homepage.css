@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #4D42B3;
+  color: #f5c96b;
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 88%;
+}
+
+.logo img {
+
+  width: 100px;
+  height: auto;
+}
+
+.logoProduit {
+  display: flex;              
+  justify-content: center;    
+  margin-top: 40px;   
+  position: relative; top: -50px        
+}
+
+  
+.logoProduit img {
+  width: 340px;               
+  height: auto;  
+  position: relative; right: 140px             
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 90px;
+  margin: 0;
+  padding: 0;
+  position: relative; top: -20px;
+  position: relative; right: -90px;
+} 
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  height: 80vh;
+} 
+
+
+.left-logo {
+  width: 700px;        
+  height: auto;
+  display: block;
+  position: relative; right: 90px
+}
+
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+  color: #ffffff;
+}
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.center h2 {
+  font-size: 30px;
+  font-weight: bold;
+  position: relative; top: 20px;
+  position: relative; right: 140px;
+}
+
+.placeholder {
+  margin-top: 20px;
+  color: #fff;
+  font-style: italic;
+}
+
+.right {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.right strong {
+  color: #ffffff;
+}
+
+.buy-btn {
+  background-color: #000000; 
+  color: #ffffff;            
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 25px;       
+  cursor: pointer;
+  margin-bottom: 20px;       
+  transition: 0.3s ease;
+  position: relative; right: 140px;
+}
+
+.btn-group {
+  display: flex;
+  gap: 15px;      
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.buy-btn:hover {
+  background-color: #000000; 
+  transform: scale(1.05);    
+}
+
+.center .subtitle {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-top: 10px;
+  position: relative;
+  right: 140px; 
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); } /* agrandit un peu */
+  100% { transform: scale(1); }
+}
+
+.logoProduit:hover {
+  animation: pulse 1s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}     
