@@ -23,3 +23,17 @@ document.querySelectorAll(".desc-btn").forEach((btn) => {
         desc.classList.toggle("show");
     });
 });
+/* TEAM PAGE – MODAL */
+function openModal(imgSrc, text) {
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+    const modalText = document.getElementById("modalText");
+
+    modal.style.display = "flex";
+    modalImg.src = imgSrc;
+    modalText.textContent = text;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
