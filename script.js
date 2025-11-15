@@ -16,3 +16,10 @@ tabButtons.forEach(btn => {
     });
 });
 
+/* PRODUCT DESCRIPTION TOGGLE */
+document.querySelectorAll(".desc-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const desc = btn.nextElementSibling;
+        desc.classList.toggle("show");
+    });
+});
