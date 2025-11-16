@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KineticPulse Pricing</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KineticPulse — Prices</title>
   <link rel="stylesheet" href="pricing-page.css" />
 </head>
 <body>
-  <!-- Header standardisé -->
   <header class="global-header">
-    <a class="header-logo" href="index.html" aria-label="KineticPulse Home">
-      <img src="image/logo.png" alt="KineticPulse Logo" />
+    <a class="header-logo" href="index.html" aria-label="KineticPulse home">
+      <img src="image/logo.png" alt="KineticPulse logo">
     </a>
-    <nav class="header-nav" aria-label="Primary">
+    <nav class="header-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="feature.html">Features</a>
       <a href="a-pricing-page.html" aria-current="page">Prices</a>
@@ -20,37 +19,56 @@
       <a href="teamPage.html">About Us</a>
     </nav>
   </header>
-  
-  <main>
-    <!-- BASIC BAND -->
-    <section class="product">
-      <img src="image/PulsX-pink.png" alt="Basic Band device in pink" class="product-img" />
-      <h2 class="product-name" onclick="toggleDescription(this)">Basic Band</h2>
-      <p class="price">$99</p>
-      <p class="description">Standard battery. Charges one phone. Basic translation.</p>
-      <div class="color-selector">
-        <button class="color-btn pink"   onclick="changeColor(this, 'image/PulsX-pink.png')"   aria-label="Pink variant"></button>
-        <button class="color-btn blue"   onclick="changeColor(this, 'image/PulsX-blue.png')"   aria-label="Blue variant"></button>
-        <button class="color-btn green"  onclick="changeColor(this, 'image/PulsX-green.png')"  aria-label="Green variant"></button>
-        <button class="color-btn purple" onclick="changeColor(this, 'image/PulsX-purple.png')" aria-label="Purple variant"></button>
-      </div>
+
+  <main class="pricing-main">
+    <section class="pricing-intro">
+      <h1>Our Bands</h1>
+      <p class="lead">Two smart options — choose the look and power you want.</p>
     </section>
-  
-    <!-- BATTERY BAND -->
-    <section class="product">
-      <img src="image/pulse-pro-blue.png" alt="Battery Band device in blue" class="product-img" />
-      <h2 class="product-name" onclick="toggleDescription(this)">Battery Band</h2>
-      <p class="price">$179</p>
-      <p class="description">Large battery. Charges two phones. Translates 155+ languages.</p>
-      <div class="color-selector">
-        <button class="color-btn blue"   onclick="changeColor(this, 'image/pulse-pro-blue.png')"   aria-label="Blue variant"></button>
-        <button class="color-btn green"  onclick="changeColor(this, 'image/pulse-pro-green.png')"  aria-label="Green variant"></button>
-        <button class="color-btn pink"   onclick="changeColor(this, 'image/pulse-pro-pink.png')"   aria-label="Pink variant"></button>
-        <button class="color-btn purple" onclick="changeColor(this, 'image/pulse-pro-purple.png')" aria-label="Purple variant"></button>
-      </div>
+
+    <section class="pricing-grid">
+      <!-- Basic Band -->
+      <article class="pricing-card" aria-label="Basic Band">
+        <div class="product-visual">
+          <img id="basic-img" src="image/PulsX-black.png" alt="Basic Band image" />
+        </div>
+
+        <h2 class="product-title">Basic Band</h2>
+        <div class="price">$99</div>
+        <p class="product-copy">Standard battery. Charges one phone. Basic translation.</p>
+
+        <div class="color-row" role="tablist" aria-label="Choose color for Basic Band" data-product="basic">
+          <button class="color-dot" data-image="image/PulsX-pink.png" style="--dot:#ff4d9b" aria-label="Pink"></button>
+          <button class="color-dot" data-image="image/PulsX-blue.png" style="--dot:#2fa8ff" aria-label="Blue"></button>
+          <button class="color-dot selected" data-image="image/PulsX-black.png" style="--dot:#1b1b1b" aria-label="Black"></button>
+          <button class="color-dot" data-image="image/PulsX-green.png" style="--dot:#2ecc71" aria-label="Green"></button>
+        </div>
+
+        <a class="buy" href="a-pricing-page.html#basic">Buy now</a>
+      </article>
+
+      <!-- Battery Band -->
+      <article class="pricing-card" aria-label="Battery Band">
+        <div class="product-visual">
+          <img id="battery-img" src="image/pulse-pro-black.png" alt="Battery Band image" />
+        </div>
+
+        <h2 class="product-title">Battery Band</h2>
+        <div class="price">$179</div>
+        <p class="product-copy">Large battery. Charges two phones. Translates 155+ languages.</p>
+
+        <div class="color-row" role="tablist" aria-label="Choose color for Battery Band" data-product="battery">
+          <button class="color-dot" data-image="image/pulse-pro-pink.png" style="--dot:#ff4d9b" aria-label="Pink"></button>
+          <button class="color-dot" data-image="image/pulse-pro-blue.png" style="--dot:#2fa8ff"></button>
+          <button class="color-dot selected" data-image="image/pulse-pro-black.png" style="--dot:#1b1b1b" aria-label="Black"></button>
+          <button class="color-dot" data-image="image/pulse-pro-purple.png" style="--dot:#8a63ff" aria-label="Purple"></button>
+        </div>
+
+        <a class="buy" href="a-pricing-page.html#battery">Buy now</a>
+      </article>
     </section>
   </main>
-  
-  <script src="pricing-page.js"></script>
+
+  <script src="pricing-page.js" defer></script>
 </body>
 </html>
