@@ -21,19 +21,31 @@
   </header>
 
   <main>
-    <section class="main-content">
+    <section class="main-content" aria-labelledby="hero-title">
+      <!-- Left column: brand illustration -->
       <div class="content-left">
         <div class="brand-block" aria-label="Brand illustration">
-          <img src="image/logo.homepage.png" alt="KineticPulse logo illustration" class="logo-illustration" />
-          <!-- Removed duplicate brand name + slogan text per user request -->
+          <img src="image/logo.homepage.png"
+               alt="KineticPulse brand mark"
+               class="logo-illustration" />
         </div>
       </div>
+
+      <!-- Right column: title, centered buttons under the title, watch to the right -->
       <div class="content-right">
-        <h2 class="hero-title">Kinetic Pulse Pro</h2>
-        <div class="hero-actions" aria-label="Primary actions and product preview">
-          <a class="action-btn" href="a-pricing-page.html">Buy now</a>
-          <img src="image/pulse-pro-black.png" alt="KineticPulse Pro watch" class="watch-inline" />
-          <a class="action-btn" href="feature.html">Learn more</a>
+        <h1 id="hero-title" class="hero-title">Kinetic Pulse Pro</h1>
+
+        <div class="hero-actions" aria-label="Purchase and information actions">
+          <div class="btn-row" role="group" aria-label="Primary CTAs">
+            <a class="action-btn" href="a-pricing-page.html">Buy now</a>
+            <a class="action-btn" href="feature.html">Learn more</a>
+          </div>
+
+          <div class="watch-wrap" aria-hidden="false">
+            <img src="image/pulse-pro-black.png"
+                 alt="Kinetic Pulse Pro watch front view"
+                 class="watch-inline" />
+          </div>
         </div>
       </div>
     </section>
