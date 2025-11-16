@@ -1,8 +1,4 @@
-/* =========================
-   scrip.js - Consolidated scripts
-   Replaces: feature.js, pricing-page.js, teamPage.js and small support helpers
-   Each module runs only when its DOM is present.
-   ========================= */
+/* Consolidated site JS: product viewer, pricing color selector, small helpers */
 
 (function featureModule(){
   function $(s, c=document){ return c.querySelector(s); }
@@ -24,14 +20,11 @@
     }));
 
     let i = 0;
-
     function show(index){
       if (!items.length) return;
       i = (index + items.length) % items.length;
-
       viewer.classList.remove('bounce'); void viewer.offsetWidth;
       viewer.classList.add('bounce');
-
       const next = new Image();
       next.onload = () => {
         imgEl.src = next.src;
@@ -41,7 +34,6 @@
         requestAnimationFrame(() => imgEl.classList.add('ready'));
       };
       next.src = items[i].image || '';
-
       nameEl && (nameEl.textContent = items[i].name);
       descEl && (descEl.textContent = items[i].desc);
     }
@@ -60,30 +52,25 @@
   document.addEventListener('DOMContentLoaded', () => {
     const rows = document.querySelectorAll('.color-row');
     if (!rows || rows.length === 0) return;
-
     rows.forEach(row => {
       const productKey = row.dataset.product;
       const imgEl = document.getElementById(productKey === 'basic' ? 'basic-img' : 'battery-img');
       const dots = Array.from(row.querySelectorAll('.color-dot'));
       if (!dots.length) return;
-
       dots.forEach(btn => {
         btn.setAttribute('type','button');
         btn.setAttribute('role','button');
         btn.setAttribute('tabindex','0');
         btn.setAttribute('aria-pressed', btn.classList.contains('selected') ? 'true' : 'false');
-
         btn.addEventListener('click', () => selectColor(btn));
         btn.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
         });
       });
-
       const initial = dots.find(d => d.classList.contains('selected')) ||
                       dots.find(d => (d.dataset.image || '').toLowerCase().includes('black')) ||
                       dots[0];
       if (initial) selectColor(initial, true);
-
       function selectColor(button, skipFocus = false) {
         if (!button) return;
         const src = button.dataset.image;
@@ -96,7 +83,6 @@
         preloadAndSwap(imgEl, src);
         if (!skipFocus) button.focus();
       }
-
       function preloadAndSwap(imgEl, src) {
         if (!imgEl) return;
         imgEl.style.transition = 'opacity 140ms linear';
@@ -110,19 +96,6 @@
         };
         pre.src = src;
       }
-    });
-  });
-})();
-
-(function teamModule(){
-  document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll(".nav-item");
-    if (!navItems || navItems.length === 0) return;
-    navItems.forEach(item => {
-      item.addEventListener("click", () => {
-        navItems.forEach(i => i.classList.remove("active"));
-        item.classList.add("active");
-      });
     });
   });
 })();
