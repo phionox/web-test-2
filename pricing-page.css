@@ -1,0 +1,124 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #4D42B3;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Logo left, nav right */
+  padding: 20px;
+  background-color: #4D42B3;
+  border-bottom: 1px solid #ccc;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #fff;
+}
+
+.tagline {
+  margin-left: auto;
+  font-style: italic;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  gap: 32px;
+  /* No justify-content here; let header handle placement */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  flex: 0 0 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.product-name {
+  color: #0077cc;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: color 0.3s;
+}
+
+.product-name:hover {
+  color: #ff6600;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.description {
+  display: none;
+  font-size: 14px;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* COLOR SELECTOR STYLES */
+.color-selector {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.color-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #444;
+  transition: transform 0.2s;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+}
+
+.color-btn.selected {
+  border: 3px solid #222;
+}

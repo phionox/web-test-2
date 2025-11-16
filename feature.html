@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KineticPulse — Features & Products</title>
+  <meta name="description" content="KineticPulse: motion-powered smartwatch with real-time translation, wireless charging and health features." />
+  <link rel="stylesheet" href="feature.css" />
+</head>
+<body>
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" role="banner">
+    <a class="logo" href="index.html" aria-label="KineticPulse home">
+      <img src="images/logo.png" alt="KineticPulse logo">
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul class="nav">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link active" href="feature.html">Feature</a></li>
+        <li><a class="nav-link" href="a-pricing-page.html">Price</a></li>
+        <li><a class="nav-link" href="teamPage.html">Team</a></li>
+        <li><a class="nav-link" href="support-info.html">Support</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="content">
+    <!-- ===================== TOP FEATURES ===================== -->
+    <section class="section features-top" aria-labelledby="features-title">
+      <h1 id="features-title" class="page-title">Features</h1>
+
+      <div class="cards" role="list">
+        <article class="card" role="listitem" aria-label="Real-time Translation">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="#fff" d="M12 3a6 6 0 1 0 0 12 6 6 0 0 0 0-12Zm0 2a4 4 0 0 1 0 8c-.3 0-.6 0-.9-.1 1-1 1.9-2.4 2.4-3.9h1.5v-1h-1.2c.1-.6.2-1.2.2-1.9h-1c0 .6-.1 1.2-.2 1.9H9.9v1h2.3c-.4 1.1-1.1 2.2-2 3.1A4 4 0 0 1 12 5Z"/>
+            </svg>
+          </div>
+          <h3>Real-time Translation</h3>
+          <p>Understand and reply across languages directly from your wrist.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Wireless Power Charging">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="#fff" d="M13 2 6 13h4l-1 9 7-11h-4l1-9z"/>
+              <path fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" opacity=".9"
+                    d="M3.5 12A8.5 8.5 0 0 0 12 20.5M20.5 12A8.5 8.5 0 0 0 12 3.5"/>
+            </svg>
+          </div>
+          <h3>Wireless Power Charging</h3>
+          <p>Motion-powered energy with Qi output for quick phone top-ups.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Health & Wellness">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="#fff" d="M12 21s-6.7-4.3-8.6-8.1C2 9.7 3.8 7 6.6 7c1.7 0 2.9.9 3.4 2 .5-1.1 1.7-2 3.4-2 2.8 0 4.6 2.7 3.2 5.9C18.7 16.7 12 21 12 21z"/>
+            </svg>
+          </div>
+          <h3>Health & Wellness</h3>
+          <p>Track heart rate, sleep and activity with clear, privacy-first metrics.</p>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Smart Notifications">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path fill="#fff" d="M12 2l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17l-5.9 3 1.2-6.5L2.5 8.9 9 8l3-6z"/>
+            </svg>
+          </div>
+          <h3>Smart Notifications</h3>
+            <p>Weather, calls and alerts — only what matters, when it matters.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT VIEWER ===================== -->
+    <section class="section viewer-wrap" aria-label="Product gallery">
+      <button class="arrow arrow-left" aria-label="Previous product" data-dir="prev">‹</button>
+
+      <div class="viewer" aria-live="polite">
+        <figure class="photo-frame" id="photo-frame">
+          <div class="placeholder">product photo</div>
+          <img id="product-image" src="" alt="Product photo" />
+        </figure>
+
+        <h2 id="product-name" class="product-name">KineticPulse Pro</h2>
+        <p id="product-desc" class="product-desc">
+          Advanced sensors, live translation and long battery life.
+        </p>
+
+        <a class="btn" href="a-pricing-page.html">Try the Band</a>
+      </div>
+
+      <button class="arrow arrow-right" aria-label="Next product" data-dir="next">›</button>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section cta" aria-label="Call to action">
+      <h2 class="cta-title">Try the Band</h2>
+      <p class="cta-sub">Experience translation, charging and health in one wearable.</p>
+      <a class="btn btn-ghost" href="a-pricing-page.html">Get Started</a>
+    </section>
+  </main>
+
+  <!-- ============== PRODUCT DATA (2 produits) ============== -->
+  <ul id="product-data" hidden>
+    <li
+      data-image="images/pulse-pro-black.png"
+      data-name="KineticPulse Pro"
+      data-desc="Advanced sensors, live translation and long battery life.">
+    </li>
+    <li
+      data-image="images/PulsX-black.png"
+      data-name="KineticPulse X"
+      data-desc="Premium rounded glass design with fast wireless top-up.">
+    </li>
+  </ul>
+
+  <script src="feature.js" defer></script>
+</body>
+</html>

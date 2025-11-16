@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KineticPulse Pricing</title>
+  <link rel="stylesheet" href="pricing-page.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-tagline">
+      <img src="images/logo.png" alt="KineticPulse Logo" class="logo" />
+      <p class="tagline">Move. Translate. Charge.</p>
+    </div>
+    <h1>KineticPulse</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="feature.html">Featuring</a>
+      <a href="a-pricing-page.html">Price</a>
+      <a href="teamPage.html">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BASIC BAND -->
+    <section class="product">
+      <img src="images/PulsX-pink.png" alt="Basic Wristband" class="product-img" />
+      <h2 class="product-name" onclick="toggleDescription(this)">Basic Band</h2>
+      <p class="price">$99</p>
+      <p class="description">Standard battery. Charges one phone. Basic translation.</p>
+      <div class="color-options">
+        <button onclick="changeColor(this, 'images/PulsX-pink.png')">Pink</button>
+        <button onclick="changeColor(this, 'images/PulsX-blue.png')">Blue</button>
+        <button onclick="changeColor(this, 'images/PulsX-green.png')">Green</button>
+        <button onclick="changeColor(this, 'images/PulsX-purple.png')">Purple</button>
+      </div>
+    </section>
+
+    <!-- BATTERY BAND -->
+    <section class="product">
+      <img src="images/pulse-pro-blue.png" alt="Battery Wristband" class="product-img" />
+      <h2 class="product-name" onclick="toggleDescription(this)">Battery Band</h2>
+      <p class="price">$179</p>
+      <p class="description">Large battery. Charges two phones. Translates more than 155 languages.</p>
+      <div class="color-options">
+        <button onclick="changeColor(this, 'images/pulse-pro-blue.png')">Blue</button>
+        <button onclick="changeColor(this, 'images/pulse-pro-green.png')">Green</button>
+        <button onclick="changeColor(this, 'images/pulse-pro-pink.png')">Pink</button>
+        <button onclick="changeColor(this, 'images/pulse-pro-purple.png')">Purple</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="pricing-page.js"></script>
+</body>
+</html>
