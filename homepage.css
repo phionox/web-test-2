@@ -5,6 +5,45 @@ body {
   color: #fff;
 }
 
+/* ================== GLOBAL HEADER ================== */
+.global-header {
+  padding: 16px 28px;
+  background: #4D42B3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-logo img {
+  height: 42px;
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px 6px;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.header-nav a[aria-current="page"],
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================== MAIN CONTENT ================== */
 header {
   width: 100%;
   padding: 40px 0 0 0;
@@ -90,6 +129,31 @@ main {
   justify-content: flex-start;
 }
 
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50px;
+}
+
+.logo-illustration {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #fff;
+}
+
+.brand-block .slogan {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0;
+}
+
 .left-illust {
   width: 320px;
   margin-left: 50px;
@@ -108,8 +172,8 @@ main {
   font-size: 2.3rem;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 12px;
-  margin-top: 20px;
+  margin-bottom: 25px;
+  margin-top: 0;
 }
 
 .subtitle {
