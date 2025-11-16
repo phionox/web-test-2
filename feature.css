@@ -29,35 +29,42 @@ body{
 }
 
 /* ================== HEADER ================== */
-.site-header{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:18px 20px;
-  display:flex; align-items:center; gap:16px;
+.global-header {
+  padding: 16px 28px;
+  background: #4D42B3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Logo sans cercle ni fond */
-.logo{
-  display:flex; align-items:center;
-  width:auto; height:56px;
-  border:0; background:transparent;
-}
-.logo img{
-  display:block;
-  height:52px;
-  width:auto;
+.header-logo img {
+  height: 42px;
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px 6px;
+  display: block;
 }
 
-@media (max-width:860px){
-  .logo{ height:48px }
-  .logo img{ height:44px }
+.header-nav {
+  display: flex;
+  gap: 32px;
 }
 
-.main-nav{margin-left:auto;display:flex;gap:28px}
-.nav-link{
-  color:var(--ink);text-decoration:none;font-size:18px;
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
 }
-.nav-link.active{ text-decoration:underline 2px; }
+
+.header-nav a[aria-current="page"],
+.header-nav a:hover {
+  text-decoration: underline;
+}
 
 /* ================== LAYOUT ================== */
 .section{max-width:var(--max); margin:0 auto; padding:14px 20px 40px}
