@@ -1,63 +1,49 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KineticPulse – Home</title>
+    <title>KineticPulse – Move. Charge. Translate.</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="home-page">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/logo.png" alt="KineticPulse logo" />
+          </a>
+        </div>
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css" />
-</head>
+        <div class="navigation">
+          <a href="features.html">PRODUCT FEATURES</a>
+          <a href="pricing.html">PRICES</a>
+          <a href="team.html">OUR TEAM</a>
+        </div>
 
-<body>
+        <div class="clear-floats"></div>
+      </div>
+    </div>
 
-    <!-- HEADER COMMUN -->
-    <header class="top-header">
-        <a href="index.html" class="logo-link">
-            <img src="images/logo.png" alt="KineticPulse Logo" class="logo" />
-        </a>
+    <!-- CONTENU HOME -->
+    <div class="content">
+      <!-- image de fond style "hero" -->
+      <img src="images/pulse-pro-black.png" class="hero-image" alt="KineticPulse Watch" />
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="feature.html">Product Features</a></li>
-                <li><a href="a-pricing-page.html">Prices</a></li>
-                <li><a href="team.html">Our Team</a></li>
-            </ul>
-        </nav>
-    </header>
+      <div class="logo-container">
+        <img src="images/logo.homepage.png" class="logo-hero" alt="KineticPulse logo large" />
+      </div>
 
-    <!-- MAIN SECTION ACCUEIL -->
-    <main class="home-main">
+      <h1>
+        KineticPulse Pro<br />
+        <span class="emphasized">Move. Charge. Translate.</span>
+      </h1>
 
-        <!-- Left side -->
-        <section class="left">
-            <img src="images/logo.homepage.png" alt="KineticPulse Homepage Logo" class="left-logo" />
-        </section>
-
-        <!-- Center content -->
-        <section class="center">
-            <h1 class="home-title">KineticPulse Pro</h1>
-            <p class="subtitle">Move. Charge. Translate.</p>
-
-            <div class="btn-group">
-                <a href="a-pricing-page.html" class="btn-primary">Buy now</a>
-                <a href="feature.html" class="btn-secondary">Learn more</a>
-            </div>
-
-            <div class="product-showcase">
-                <img src="images/pulse-pro-blue.png" alt="KineticPulse Pro Blue" class="main-watch" />
-            </div>
-        </section>
-
-        <!-- Right side (optional content area) -->
-        <section class="right">
-            <!-- You can add icons or extra features later -->
-        </section>
-
-    </main>
-
-    <!-- Main JS -->
-    <script src="script.js"></script>
-</body>
+      <div class="button-container">
+        <a href="features.html" class="button">BROWSE FEATURES ></a>
+        <a href="pricing.html" class="button button-ghost">SEE PRICES ></a>
+      </div>
+    </div>
+  </body>
 </html>
