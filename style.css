@@ -1,9 +1,8 @@
 /* ===========================================================================
    style.css - Consolidated stylesheet for the whole site
-   Combines: homepage.css, feature.css, pricing-page.css, teamPage.css
+   Combines: homepage.css, feature.css, pricing-page.css, teamPage.css, inline support styles
    =========================================================================== */
 
-/* ---------- Root / variables / base ---------- */
 :root{
   --bg:#4d42b3;
   --ink:#ffffff;
@@ -98,11 +97,9 @@ main {
 /* ========== Features (top cards + viewer) ========== */
 .section.features-top { padding-top:28px; padding-bottom:36px; }
 
-/* Top feature cards */
 .cards {
   display:grid; grid-template-columns:repeat(4, minmax(200px,1fr)); gap:18px;
-  max-width:1200px; margin:0 auto 8px;
-  padding: 0 12px;
+  max-width:1200px; margin:0 auto 8px; padding:0 12px;
 }
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
@@ -113,11 +110,7 @@ main {
   backdrop-filter: blur(6px);
   display:flex; flex-direction:column; justify-content:flex-start;
 }
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 26px 60px rgba(17,10,60,0.20);
-  background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
-}
+.card:hover { transform: translateY(-6px); box-shadow: 0 26px 60px rgba(17,10,60,0.20); background: linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015)); }
 .card .icon{ width:44px;height:44px;margin-bottom:12px; display:flex; align-items:center; justify-content:center; opacity:.96 }
 .card svg{ width:28px; height:28px; display:block }
 .card h3{ margin:4px 0 8px; font-size:18px; font-weight:800; color:#fff }
@@ -125,15 +118,8 @@ main {
 
 /* Viewer area */
 .viewer-wrap{ position:relative; display:flex; align-items:center; justify-content:center; padding:40px 24px 80px; }
-.arrow{
-  position:absolute; top:50%; transform:translateY(-50%);
-  width:54px; height:54px; border-radius:50%;
-  background: #fff; color:#111; border:0;
-  display:grid; place-items:center; cursor:pointer;
-  box-shadow: 0 30px 60px rgba(10,10,40,0.28); z-index:30;
-}
-.arrow-left{ left:28px; }
-.arrow-right{ right:28px; }
+.arrow{ position:absolute; top:50%; transform:translateY(-50%); width:54px; height:54px; border-radius:50%; background:#fff; color:#111; border:0; display:grid; place-items:center; cursor:pointer; box-shadow: 0 30px 60px rgba(10,10,40,0.28); z-index:30; }
+.arrow-left{ left:28px; } .arrow-right{ right:28px; }
 .arrow:hover { transform: translateY(-50%) scale(1.03); box-shadow: 0 40px 80px rgba(8,8,36,0.32); }
 
 /* Big centered product card */
@@ -144,8 +130,6 @@ main {
   box-shadow: var(--shadow-soft); display:flex; flex-direction:column; align-items:center; gap:18px; backdrop-filter: blur(8px);
   margin: 0 auto;
 }
-
-/* photo frame */
 .photo-frame{ position:relative; width:clamp(260px,36vw,420px); height:clamp(260px,36vw,420px); display:grid; place-items:center; overflow:visible; }
 .photo-frame img{ max-width:100%; max-height:100%; object-fit:contain; object-position:center; opacity:0; transform:scale(.98); transition:opacity .45s ease, transform .45s; }
 .photo-frame img.ready{ opacity:1; transform:scale(1); }
@@ -159,7 +143,6 @@ main {
 .pricing-intro h1 { font-size:28px; margin:0 0 6px; color:#fff; }
 .pricing-intro .lead { margin:0; color:rgba(255,255,255,0.9) }
 
-/* Pricing grid centered with fixed-ish card width */
 .pricing-grid {
   display:grid;
   grid-template-columns:repeat(2, minmax(420px, 520px));
@@ -170,7 +153,6 @@ main {
   margin: 0 auto;
   padding: 0 20px 48px;
 }
-
 .pricing-card {
   width: 100%;
   max-width: 520px;
@@ -192,19 +174,12 @@ main {
 .product-copy { color: rgba(255,255,255,0.82); font-size:13px; margin-bottom:18px; max-width:360px; }
 
 .color-row { display:flex; gap:14px; align-items:center; justify-content:center; margin-bottom:18px; }
-.color-dot {
-  width:22px; height:22px; border-radius:50%;
-  border: 4px solid rgba(255,255,255,0.08);
-  box-shadow: 0 6px 18px rgba(6,5,30,0.25);
-  transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease;
-}
+.color-dot { width:22px; height:22px; border-radius:50%; border: 4px solid rgba(255,255,255,0.08); box-shadow: 0 6px 18px rgba(6,5,30,0.25); transition: transform .14s ease, box-shadow .14s ease, border-color .14s ease; }
 .color-dot:hover { transform: translateY(-4px); box-shadow: 0 16px 32px rgba(6,5,30,0.28); }
 .color-dot.selected { border-color:#fff; transform: translateY(-6px); box-shadow: 0 20px 40px rgba(6,5,30,0.36), 0 0 0 6px rgba(255,255,255,0.03) inset; }
 .color-dot[style] { background: var(--dot, #fff); }
 
-.buy {
-  display:inline-block; padding:10px 18px; background:#000; color:#fff; border-radius:12px; text-decoration:none; font-weight:700; box-shadow: 0 18px 40px rgba(0,0,0,0.45); margin-top:10px;
-}
+.buy { display:inline-block; padding:10px 18px; background:#000; color:#fff; border-radius:12px; text-decoration:none; font-weight:700; box-shadow: 0 18px 40px rgba(0,0,0,0.45); margin-top:10px; }
 .buy:hover { transform: translateY(-3px); box-shadow: 0 26px 60px rgba(0,0,0,0.52); }
 
 /* ========== Team ========== */
@@ -213,7 +188,7 @@ main {
 .team-card { background: #fff; width:230px; padding:15px; border-radius:12px; color:#4b4b4b; }
 .image-placeholder { width:100%; height:110px; background:#EDEDED; border-radius:8px; margin-bottom:15px; }
 
-/* ========== Support (migrated inline styles) ========== */
+/* ========== Support ========== */
 .page-header { background: var(--bg); color: white; padding:60px 20px; text-align:center; box-shadow: 0 4px 20px rgba(77,66,179,0.3); }
 .nav-tabs { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px; background:#fff; padding:20px; border-radius:15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
 .tab-btn { padding:12px 24px; background:#f5f7fa; border-radius:8px; cursor:pointer; font-size:.95em; font-weight:500; color:#555; }
@@ -223,17 +198,9 @@ main {
 .content-section.active { display:block; }
 @keyframes fadeIn { from{ opacity:0; transform: translateY(20px) } to{ opacity:1; transform: translateY(0) } }
 
-h2 { color: #4d42b3; font-size:2em; margin-bottom:25px; padding-bottom:15px; border-bottom:3px solid #4d42b3; }
-h3 { color:#3a2f8f; font-size:1.4em; margin-top:30px; margin-bottom:15px; }
-.card { background:#f8f9fc; padding:25px; border-radius:12px; border:1px solid #e0e5f0; transition: all .3s ease; }
-.card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(77,66,179,0.15); }
-
-.faq-item { background:#f8f9fc; padding:20px; border-radius:10px; margin-bottom:15px; cursor:pointer; transition: all .3s ease; }
-.faq-item.open .faq-answer { display:block; }
-.faq-answer { display:none; margin-top:15px; padding-top:15px; border-top:1px solid #d0d5e0; color:#555; }
-
-/* ---------- Animations & media queries ---------- */
+/* Animations & media queries */
 @keyframes popIn { 0%{ transform:scale(.88) translateY(18px); opacity:0 } 50%{ opacity:1 } 100%{ transform:scale(1) translateY(0); opacity:1 } }
+@keyframes fadeIn { 0%{ opacity:0; transform:translateY(18px) } 100%{ opacity:1; transform:translateY(0) } }
 @keyframes bounce { 0%{ transform:none } 30%{ transform:translateY(-8px) } 60%{ transform:translateY(3px) } 100%{ transform:none } }
 
 @media (max-width:1100px){
@@ -260,8 +227,6 @@ h3 { color:#3a2f8f; font-size:1.4em; margin-top:30px; margin-bottom:15px; }
   .viewer { padding: 28px 18px; border-radius: 16px; }
   .viewer-wrap { padding-bottom: 64px; }
   .product-title { font-size: 16px; }
-  .price { font-size: 18px; }
-  .color-dot { width: 18px; height:18px; border-width: 3px; }
 }
 
-/* End of style.css */
+/* End of consolidated stylesheet */
