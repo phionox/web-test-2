@@ -35,11 +35,7 @@
       if (!items.length) return;
       i = (index + items.length) % items.length;
 
-      // add subtle bounce animation if viewer exists
-      viewer.classList.remove('bounce');
-      // force reflow to restart animation
-      void viewer.offsetWidth;
-      viewer.classList.add('bounce');
+      viewer.classList.remove('bounce'); void viewer.offsetWidth; viewer.classList.add('bounce');
 
       const next = new Image();
       next.onload = () => {
@@ -62,7 +58,6 @@
       if (e.key === 'ArrowRight') show(i + 1);
     });
 
-    // Show first item on DOMContentLoaded
     document.addEventListener('DOMContentLoaded', () => show(0));
   })();
 
@@ -128,7 +123,6 @@
   /* ---------------- Team module - nav active handling ---------------- */
   (function teamModule() {
     document.addEventListener('DOMContentLoaded', () => {
-      // Make header nav links set an "active" class on click (useful if .nav-item not present)
       const navLinks = document.querySelectorAll('.header-nav a');
       if (!navLinks || navLinks.length === 0) return;
       navLinks.forEach(link => {
@@ -142,7 +136,6 @@
 
   /* ---------------- Support module (tabs + faq) ---------------- */
   (function supportModule() {
-    // Expose global functions for backward compatibility with inline onclick attributes
     window.showTab = function(tabId) {
       try {
         const sections = document.querySelectorAll('.content-section');
@@ -151,12 +144,9 @@
         if (buttons) buttons.forEach(b => b.classList.remove('active'));
         const target = document.getElementById(tabId);
         if (target) target.classList.add('active');
-        // if called from an event handler with event available, mark the source button active
         try { if (window.event && window.event.target) window.event.target.classList.add('active'); } catch(e){}
         window.scrollTo({ top: 0, behavior: 'smooth' });
-      } catch (err) {
-        // silent
-      }
+      } catch (err) {}
     };
 
     window.toggleFaq = function(el) {
@@ -179,7 +169,6 @@
         }));
       }
 
-      // FAQ: make the toggle work without inline onclick
       document.querySelectorAll('.faq-item').forEach(item => {
         item.addEventListener('click', () => item.classList.toggle('open'));
       });
