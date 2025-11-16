@@ -3,32 +3,45 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #593CBA;
+  background-color: #4D42B3;
   color: white;
 }
 
-/* NAVBAR */
-header {
-  background-color: #3A0CA3;
-  padding: 10px 0;
-}
-
-.nav-links {
+/* ================== HEADER ================== */
+.global-header {
+  padding: 16px 28px;
+  background: #4D42B3;
   display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.nav-links li a {
-  color: white;
+.header-logo img {
+  height: 42px;
+  width: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 4px 6px;
+  display: block;
+}
+
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header-nav a {
+  color: #fff;
   text-decoration: none;
-  margin: 0 25px;
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.nav-links a.active {
+.header-nav a[aria-current="page"],
+.header-nav a:hover {
   text-decoration: underline;
 }
 
