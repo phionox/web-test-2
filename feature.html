@@ -1,28 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>KineticPulse — Features & Products</title>
-  <meta name="description" content="KineticPulse: motion-powered smartwatch with real-time translation, wireless charging and health features." />
+  <title>KineticPulse — Features</title>
+
+  <!-- même CSS que le reste du site -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===================== HEADER ===================== -->
+  <!-- =============== HEADER =============== -->
   <header class="site-header" role="banner">
+    <!-- LOGO EN HAUT À GAUCHE -->
     <a class="logo" href="index.html" aria-label="KineticPulse home">
-      <!-- 🔥 ici j’ai mis ton vrai fichier de logo -->
-      <img src="logo.png" alt="KineticPulse logo">
+      <img src="logotransparent.png" alt="KineticPulse logo">
     </a>
+
     <nav class="main-nav" aria-label="Main navigation">
-      <a class="nav-link active" href="feature.html">features</a>
-      <a class="nav-link" href="a-pricing-page.html">prices</a>
-      <a class="nav-link" href="team.html">About us</a>
+      <a class="nav-link active" href="feature.html">Product Features</a>
+      <a class="nav-link" href="a-pricing-page.html">Prices</a>
+      <a class="nav-link" href="support-info.html">Support</a>
+      <a class="nav-link" href="teamPage.html">About us</a>
     </nav>
   </header>
 
   <main id="content">
-    <!-- ===================== TOP FEATURES ===================== -->
+    <!-- =============== TOP FEATURE CARDS =============== -->
     <section class="section features-top" aria-labelledby="features-title">
       <h1 id="features-title" class="page-title">Features</h1>
 
@@ -75,7 +79,7 @@
       </div>
     </section>
 
-    <!-- ===================== PRODUCT VIEWER (bas) ===================== -->
+    <!-- =============== PRODUCT VIEWER (SLIDER) =============== -->
     <section class="section viewer-wrap" aria-label="Product gallery">
       <button class="arrow arrow-left" aria-label="Previous product" data-dir="prev">‹</button>
 
@@ -87,7 +91,7 @@
 
         <h2 id="product-name" class="product-name">KineticPulse Pro</h2>
         <p id="product-desc" class="product-desc">
-          Advanced sensors, live translation and long battery life.
+          Premium black finish, motion-powered battery and full translation suite.
         </p>
 
         <a class="btn" href="a-pricing-page.html">Try the Band</a>
@@ -96,7 +100,7 @@
       <button class="arrow arrow-right" aria-label="Next product" data-dir="next">›</button>
     </section>
 
-    <!-- CTA -->
+    <!-- =============== CTA =============== -->
     <section class="section cta" aria-label="Call to action">
       <h2 class="cta-title">Try the Band</h2>
       <p class="cta-sub">Experience translation, charging and health in one wearable.</p>
@@ -104,7 +108,7 @@
     </section>
   </main>
 
-  <!-- ============== DATA SOURCE FOR THE CAROUSEL =================== -->
+  <!-- =============== DONNÉES POUR LE SLIDER (NOIR UNIQUEMENT) =============== -->
   <ul id="product-data" hidden>
     <!-- Pulse Pro Black -->
     <li
