@@ -26,7 +26,10 @@ body {
   padding: 4px 6px;
   display: block;
 }
-.header-nav { display: flex; gap: 32px; }
+.header-nav {
+  display: flex;
+  gap: 32px;
+}
 .header-nav a {
   color: #fff;
   text-decoration: none;
@@ -34,7 +37,9 @@ body {
   font-weight: 700;
 }
 .header-nav a[aria-current="page"],
-.header-nav a:hover { text-decoration: underline; }
+.header-nav a:hover {
+  text-decoration: underline;
+}
 
 /* ============ HERO LAYOUT ============ */
 main {
@@ -55,8 +60,18 @@ main {
 }
 
 /* Left column */
-.content-left { flex: 1; display: flex; align-items: center; justify-content: flex-start; }
-.brand-block { display: flex; flex-direction: column; align-items: flex-start; margin-left: 10px; }
+.content-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+}
 .logo-illustration {
   width: 320px;
   max-width: 40vw;
@@ -65,29 +80,34 @@ main {
 }
 
 /* Right column */
-.content-right { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .hero-title {
   font-size: 3rem;
   font-weight: 800;
-  margin: 0 0 38px 0;
+  margin: 0 0 28px 0;
   letter-spacing: .5px;
   text-align: center;
 }
 
-/* Actions + centered watch */
-.hero-actions {
+/* Buttons row */
+.btn-row {
   display: flex;
+  gap: 28px;
   align-items: center;
   justify-content: center;
-  gap: clamp(32px, 6vw, 60px);
-  flex-wrap: wrap;
-  position: relative;
+  margin-bottom: 18px; /* space between buttons and watch */
 }
 .action-btn {
   background-color: #000;
   color: #fff;
   text-decoration: none;
-  padding: 18px 46px;
+  padding: 16px 42px;
   font-size: 1.05rem;
   font-weight: 700;
   border-radius: 50px;
@@ -96,13 +116,29 @@ main {
   justify-content: center;
   transition: background .18s ease, transform .18s ease, box-shadow .18s ease;
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  min-width: 240px;            /* ensure equal size */
+  text-align: center;
 }
-.action-btn:hover { background: #1a1a1a; transform: translateY(-3px); box-shadow: 0 14px 34px rgba(0,0,0,0.45); }
-.action-btn:active { transform: translateY(0); box-shadow: 0 6px 16px rgba(0,0,0,0.35); }
+.action-btn:hover {
+  background: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.45);
+}
+.action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
 
-.watch-wrap { display: flex; align-items: center; justify-content: center; position: relative; }
+/* Watch (aligned vertically with buttons) */
+.watch-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 0; /* important: no extra offset so watch aligns with buttons */
+}
 .watch-inline {
-  width: clamp(260px, 28vw, 380px);
+  width: clamp(300px, 28vw, 420px);
   max-width: 100%;
   display: block;
   filter: drop-shadow(0 20px 46px rgba(0,0,0,0.45));
@@ -127,17 +163,21 @@ main {
   50% { opacity: 1; }
   100% { transform: scale(1) translateY(0); opacity: 1; }
 }
-@keyframes fadeIn { 0% { opacity:0; transform:translateY(18px); } 100% { opacity:1; transform:translateY(0); } }
+@keyframes fadeIn {
+  0% { opacity:0; transform:translateY(18px); }
+  100% { opacity:1; transform:translateY(0); }
+}
 
 /* Responsive */
 @media (max-width: 1050px) {
   .main-content { flex-direction: column; }
   .hero-title { margin-bottom: 28px; font-size: 2.6rem; }
   .logo-illustration { width: 280px; }
+  .btn-row { margin-bottom: 18px; }
 }
 @media (max-width: 680px) {
   .hero-title { font-size: 2.2rem; }
-  .action-btn { padding: 16px 38px; font-size: .95rem; }
+  .action-btn { padding: 14px 28px; font-size: .95rem; min-width: 180px; }
   .watch-inline { width: clamp(220px, 56vw, 300px); }
   .hero-actions { gap: 32px; }
 }
