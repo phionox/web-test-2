@@ -7,38 +7,34 @@
   <link rel="stylesheet" href="homepage.css" />
 </head>
 <body>
-  <header>
-    <div class="branding">
-      <div class="logo-text">
-        <h1>KineticPulse</h1>
-        <p class="slogan">Move. Charge. Translate.</p>
-      </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="feature.html">Features</a></li>
-        <li><a href="a-pricing-page.html">Prices</a></li>
-        <li><a href="support-info.html">Support</a></li>
-        <li><a href="teamPage.html">About Us</a></li>
-      </ul>
+  <header class="global-header">
+    <a class="header-logo" href="index.html" aria-label="KineticPulse Home">
+      <img src="image/logo.png" alt="KineticPulse Logo" />
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="feature.html">Features</a>
+      <a href="a-pricing-page.html">Prices</a>
+      <a href="support-info.html">Support</a>
+      <a href="teamPage.html">About Us</a>
     </nav>
   </header>
 
   <main>
-    <section class="main-content">
-      <div class="content-left">
-        <img src="image/logo.homepage.png" alt="Logo illustration" class="left-illust" />
+    <section class="hero">
+      <div class="hero-left">
+        <img src="image/logo.homepage.png" alt="KineticPulse brand illustration" class="brand-illust" />
+        <h1>KineticPulse</h1>
+        <p class="slogan">Move. Charge. Translate.</p>
       </div>
-      <div class="content-right">
+      <div class="hero-right">
         <h2>Kinetic Pulse Pro</h2>
-        <p class="subtitle">Next Level Kinetic.</p>
         <div class="btn-group">
-          <button class="buy-btn">Buy now</button>
-          <button class="buy-btn">Learn more</button>
+          <button class="cta-btn">Buy now</button>
+          <button class="cta-btn">Learn more</button>
         </div>
         <div class="product-image">
-          <img src="image/pulse-pro-black.png" alt="Product watch" />
+          <img src="image/pulse-pro-black.png" alt="Kinetic Pulse Pro watch" />
         </div>
       </div>
     </section>
